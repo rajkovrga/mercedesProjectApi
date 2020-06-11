@@ -1,0 +1,9 @@
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesDomen\bin\Debug\netcoreapp3.1\MercedesDomen.deps.json
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesDomen\bin\Debug\netcoreapp3.1\MercedesDomen.dll
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesDomen\bin\Debug\netcoreapp3.1\MercedesDomen.pdb
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesDomen\obj\Debug\netcoreapp3.1\MercedesDomen.csprojAssemblyReference.cache
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesDomen\obj\Debug\netcoreapp3.1\MercedesDomen.csproj.CoreCompileInputs.cache
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesDomen\obj\Debug\netcoreapp3.1\MercedesDomen.AssemblyInfoInputs.cache
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesDomen\obj\Debug\netcoreapp3.1\MercedesDomen.AssemblyInfo.cs
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesDomen\obj\Debug\netcoreapp3.1\MercedesDomen.dll
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesDomen\obj\Debug\netcoreapp3.1\MercedesDomen.pdb

@@ -1,0 +1,12 @@
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\bin\Debug\netcoreapp3.1\MercedesImplementation.deps.json
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\bin\Debug\netcoreapp3.1\MercedesImplementation.dll
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\bin\Debug\netcoreapp3.1\MercedesImplementation.pdb
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\obj\Debug\netcoreapp3.1\MercedesImplementation.csprojAssemblyReference.cache
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\obj\Debug\netcoreapp3.1\MercedesImplementation.csproj.CoreCompileInputs.cache
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\obj\Debug\netcoreapp3.1\MercedesImplementation.AssemblyInfoInputs.cache
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\obj\Debug\netcoreapp3.1\MercedesImplementation.AssemblyInfo.cs
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\obj\Debug\netcoreapp3.1\MercedesImplementation.dll
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\obj\Debug\netcoreapp3.1\MercedesImplementation.pdb
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\bin\Debug\netcoreapp3.1\MercedesApplication.dll
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\bin\Debug\netcoreapp3.1\MercedesApplication.pdb
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesImplementation\obj\Debug\netcoreapp3.1\MercedesImplementation.csproj.CopyComplete

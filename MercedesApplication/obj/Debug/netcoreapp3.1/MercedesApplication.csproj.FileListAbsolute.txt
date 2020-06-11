@@ -1,0 +1,9 @@
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesApplication\bin\Debug\netcoreapp3.1\MercedesApplication.deps.json
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesApplication\bin\Debug\netcoreapp3.1\MercedesApplication.dll
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesApplication\bin\Debug\netcoreapp3.1\MercedesApplication.pdb
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesApplication\obj\Debug\netcoreapp3.1\MercedesApplication.csprojAssemblyReference.cache
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesApplication\obj\Debug\netcoreapp3.1\MercedesApplication.AssemblyInfoInputs.cache
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesApplication\obj\Debug\netcoreapp3.1\MercedesApplication.AssemblyInfo.cs
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesApplication\obj\Debug\netcoreapp3.1\MercedesApplication.dll
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesApplication\obj\Debug\netcoreapp3.1\MercedesApplication.pdb
+C:\Users\Rajko\Desktop\C#\MercedesProject\MercedesApplication\obj\Debug\netcoreapp3.1\MercedesApplication.csproj.CoreCompileInputs.cache

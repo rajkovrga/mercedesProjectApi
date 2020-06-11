@@ -1,0 +1,15 @@
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csprojAssemblyReference.cache
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfo.cs
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.runtimeconfig.json
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.runtimeconfig.dev.json
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.genruntimeconfig.cache
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\bin\Debug\netcoreapp3.1\MercedesDomen.dll
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\bin\Debug\netcoreapp3.1\MercedesDomen.pdb
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CopyComplete
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\Rajko\Desktop\C#\MercedesProject\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZiZoGEwugV2kkbCyZn2Jl7FO9sfoI4GSXYWLCicTs3RkdvymZP5rYUneFUWHsPztt/7JEYSmfvrObAyV+y426w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\Api\\Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rajko\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
