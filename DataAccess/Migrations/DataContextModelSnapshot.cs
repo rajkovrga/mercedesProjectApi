@@ -19,7 +19,7 @@ namespace DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MercedesDomen.Entities.Comment", b =>
+            modelBuilder.Entity("Domen.Entities.Comment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,9 +30,7 @@ namespace DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DeletedAt")
                         .HasColumnType("datetime2");
@@ -61,49 +59,30 @@ namespace DataAccess.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.CommentLike", b =>
+            modelBuilder.Entity("Domen.Entities.CommentLike", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasMaxLength(30);
 
                     b.Property<int>("CommentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CommentId1")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<DateTime>("DeletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("int")
+                        .HasMaxLength(30);
 
                     b.Property<int>("UserId")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasMaxLength(30);
 
                     b.HasKey("Id");
 
                     b.HasIndex("CommentId");
 
-                    b.HasIndex("CommentId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("CommentLikes");
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.Image", b =>
+            modelBuilder.Entity("Domen.Entities.Image", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -133,29 +112,11 @@ namespace DataAccess.Migrations
                     b.ToTable("Images");
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.Like", b =>
+            modelBuilder.Entity("Domen.Entities.Like", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<DateTime>("DeletedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2");
+                        .HasMaxLength(30);
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -172,7 +133,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Likes");
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.Permission", b =>
+            modelBuilder.Entity("Domen.Entities.Permission", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -185,9 +146,51 @@ namespace DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Permissions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "likes"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "comments"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "update-profile"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "create-product"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "update-product"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "delete-product"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "change-status"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "use-admin-panel"
+                        });
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.ProductImage", b =>
+            modelBuilder.Entity("Domen.Entities.ProductImage", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -229,7 +232,7 @@ namespace DataAccess.Migrations
                     b.ToTable("ProductImages");
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.ProductType", b =>
+            modelBuilder.Entity("Domen.Entities.ProductType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -257,9 +260,71 @@ namespace DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProductTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Limuzina"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Karavan"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Hedžbek"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kabriolet"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Kupe"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Dzip"
+                        });
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.Role", b =>
+            modelBuilder.Entity("Domen.Entities.Role", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -272,9 +337,21 @@ namespace DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Users"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Admin"
+                        });
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.RolePermission", b =>
+            modelBuilder.Entity("Domen.Entities.RolePermission", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -309,9 +386,132 @@ namespace DataAccess.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("RolePermissions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PermissionId = 1,
+                            RoleId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PermissionId = 2,
+                            RoleId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PermissionId = 3,
+                            RoleId = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PermissionId = 1,
+                            RoleId = 2
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PermissionId = 2,
+                            RoleId = 2
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PermissionId = 3,
+                            RoleId = 2
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PermissionId = 4,
+                            RoleId = 2
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PermissionId = 5,
+                            RoleId = 2
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PermissionId = 6,
+                            RoleId = 2
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PermissionId = 7,
+                            RoleId = 2
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsActive = false,
+                            IsDeleted = false,
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PermissionId = 8,
+                            RoleId = 2
+                        });
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.User", b =>
+            modelBuilder.Entity("Domen.Entities.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -319,9 +519,7 @@ namespace DataAccess.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DeletedAt")
                         .HasColumnType("datetime2");
@@ -354,7 +552,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("MercedesDomen.Product", b =>
+            modelBuilder.Entity("Domen.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -362,9 +560,7 @@ namespace DataAccess.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DeletedAt")
                         .HasColumnType("datetime2");
@@ -406,97 +602,97 @@ namespace DataAccess.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.Comment", b =>
+            modelBuilder.Entity("Domen.Entities.Comment", b =>
                 {
-                    b.HasOne("MercedesDomen.Product", "Product")
+                    b.HasOne("Domen.Product", "Product")
                         .WithMany("Comments")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("MercedesDomen.Entities.User", "User")
+                    b.HasOne("Domen.Entities.User", "User")
                         .WithMany("Comments")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.CommentLike", b =>
+            modelBuilder.Entity("Domen.Entities.CommentLike", b =>
                 {
-                    b.HasOne("MercedesDomen.Entities.User", "User")
+                    b.HasOne("Domen.Entities.Comment", "Comment")
                         .WithMany("CommentLikes")
                         .HasForeignKey("CommentId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("MercedesDomen.Entities.Comment", "Comment")
+                    b.HasOne("Domen.Entities.User", "User")
                         .WithMany("CommentLikes")
-                        .HasForeignKey("CommentId1")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.Like", b =>
+            modelBuilder.Entity("Domen.Entities.Like", b =>
                 {
-                    b.HasOne("MercedesDomen.Product", "Product")
+                    b.HasOne("Domen.Product", "Product")
                         .WithMany("Likes")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("MercedesDomen.Entities.User", "User")
+                    b.HasOne("Domen.Entities.User", "User")
                         .WithMany("Likes")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.ProductImage", b =>
+            modelBuilder.Entity("Domen.Entities.ProductImage", b =>
                 {
-                    b.HasOne("MercedesDomen.Entities.Image", "Image")
+                    b.HasOne("Domen.Entities.Image", "Image")
                         .WithMany("ProductImages")
                         .HasForeignKey("ImageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("MercedesDomen.Product", "Product")
+                    b.HasOne("Domen.Product", "Product")
                         .WithMany("ProductImages")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("MercedesDomen.Entities.ProductType", null)
+                    b.HasOne("Domen.Entities.ProductType", null)
                         .WithMany("Products")
                         .HasForeignKey("ProductTypeId");
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.RolePermission", b =>
+            modelBuilder.Entity("Domen.Entities.RolePermission", b =>
                 {
-                    b.HasOne("MercedesDomen.Entities.Permission", "Permission")
+                    b.HasOne("Domen.Entities.Permission", "Permission")
                         .WithMany("RolePermissions")
                         .HasForeignKey("PermissionId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("MercedesDomen.Entities.Role", "Role")
+                    b.HasOne("Domen.Entities.Role", "Role")
                         .WithMany("RolePermissions")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("MercedesDomen.Entities.User", b =>
+            modelBuilder.Entity("Domen.Entities.User", b =>
                 {
-                    b.HasOne("MercedesDomen.Entities.Role", "Role")
+                    b.HasOne("Domen.Entities.Role", "Role")
                         .WithMany("Users")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("MercedesDomen.Product", b =>
+            modelBuilder.Entity("Domen.Product", b =>
                 {
-                    b.HasOne("MercedesDomen.Entities.ProductType", "TypeProduct")
+                    b.HasOne("Domen.Entities.ProductType", "TypeProduct")
                         .WithMany()
                         .HasForeignKey("TypeProductId")
                         .OnDelete(DeleteBehavior.Cascade)

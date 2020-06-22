@@ -1,4 +1,4 @@
-﻿using MercedesDomen.Entities;
+﻿using Domen.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -14,8 +14,13 @@ namespace DataAccess.Configurations
         {
             builder.HasMany(x => x.CommentLikes)
                 .WithOne(x => x.User)
-                .HasForeignKey(x => x.CommentId)
+                .HasForeignKey(x => x.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasMany(x => x.Likes)
+                .WithOne(x => x.User)
+                .HasForeignKey(x => x.UserId)
+                .OnDelete(DeleteBehavior.Restrict);                
         }
     }
 }

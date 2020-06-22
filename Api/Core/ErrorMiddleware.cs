@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Application.Exceptions;
+using FluentValidation;
 
 namespace Api.Core
 {
@@ -33,10 +35,37 @@ namespace Api.Core
 
                     switch(er)
                     {
-                            
-
+                        case ModelNotFound ex:
+                        httpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                        response = new
+                        {
+                            message = "Model not found"
+                        };
+                        break;
+                        case ValidationException ex:
+                        httpContext.Response.StatusCode = StatusCodes.Status422UnprocessableEntity;
+                        response = new
+                        {
+                            message = "Fields is not a good",
+                            errors = ex.Errors.Select(x => new {
+                                x.PropertyName,
+                                x.ErrorMessage
+                            })
+                        };
+                        break;
+                        case ForbiddenException ex:
+                        httpContext.Response.StatusCode = StatusCodes.Status403Forbidden;
+                        response = new
+                        {
+                            message = "User don't have permission for this action"
+                        };
+                        break;
                         default:
-                            
+                        httpContext.Response.StatusCode = statusCode;
+                        response = new
+                        {
+                            message = er.Message,
+                        };
                         break;
                     }
 

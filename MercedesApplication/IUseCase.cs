@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MercedesApplication
+namespace Application
 {
     public interface IUseCase
     {

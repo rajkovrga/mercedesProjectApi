@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MercedesDomen.Entities
+namespace Domen.Entities
 {
     public class Image : Entity
     {

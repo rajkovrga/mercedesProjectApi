@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MercedesApplication.Exceptions
+namespace Application.Exceptions
 {
     public class ForbiddenException : Exception
     {

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Text;
 using DataAccess.Configurations;
-using MercedesDomen;
-using MercedesDomen.Entities;
+using DataAccess.Migrations;
+using Domen;
+using Domen.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess
@@ -19,29 +20,52 @@ namespace DataAccess
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            modelBuilder.Entity<Role>().HasData(new Role
-            {
-                Name = "admin"
-            },
-            new Role 
-            { 
-                Name = "user"
-            });
-
             modelBuilder.ApplyConfiguration<Product>(new ProductConfig());
+            modelBuilder.ApplyConfiguration(new CommentConfig());
             modelBuilder.ApplyConfiguration<User>(new UserConfig());
             modelBuilder.ApplyConfiguration<Permission>(new PermissionsConfig());
 
-            modelBuilder.Entity<User>().Property(X => X.CreatedAt).HasDefaultValueSql("GETDATE()");
-            modelBuilder.Entity<Product>().Property(X => X.CreatedAt).HasDefaultValueSql("GETDATE()");
-            modelBuilder.Entity<Comment>().Property(X => X.CreatedAt).HasDefaultValueSql("GETDATE()");
-            modelBuilder.Entity<Like>().Property(X => X.CreatedAt).HasDefaultValueSql("GETDATE()");
-            modelBuilder.Entity<CommentLike>().Property(X => X.CreatedAt).HasDefaultValueSql("GETDATE()");
+            modelBuilder.Entity<User>().HasQueryFilter(x => !x.IsDeleted);
+            modelBuilder.Entity<Product>().HasQueryFilter(x => !x.IsDeleted);
+            modelBuilder.Entity<Comment>().HasQueryFilter(x => !x.IsDeleted);
 
-            modelBuilder.Entity<User>().HasQueryFilter(x => x.DeletedAt != null);
-            modelBuilder.Entity<Product>().HasQueryFilter(x => x.DeletedAt != null);
-            modelBuilder.Entity<Comment>().HasQueryFilter(x => x.DeletedAt != null);
+            modelBuilder.Entity<Like>().Property(x => x.Id).HasMaxLength(30);
+            modelBuilder.Entity<Like>().HasKey(x => x.Id);
+            modelBuilder.Entity<CommentLike>().Property(x => x.Id).HasMaxLength(30);
+            modelBuilder.Entity<CommentLike>().HasKey(x => x.Id);
+            modelBuilder.Entity<CommentLike>().Property(x => x.CommentId).HasMaxLength(30);
+            modelBuilder.Entity<CommentLike>().Property(x => x.UserId).HasMaxLength(30);
 
+            modelBuilder.SeedPermissions();
+            modelBuilder.SeedRoles();
+            modelBuilder.SeedRolePermission();
+            modelBuilder.SeedTypes();
+        }
+
+
+        public override int SaveChanges()
+        {
+            var items = ChangeTracker.Entries();
+            foreach(var item in items)
+            {
+                if(item.Entity is Entity e)
+                {
+                    switch(item.State)
+                    {
+                        case EntityState.Added:
+                            e.CreatedAt = DateTime.Now;
+                            e.IsActive = true;
+                            e.IsDeleted = false;
+                            break;
+
+                        case EntityState.Modified:
+                            e.ModifiedAt = DateTime.Now;
+                            break;
+                    }
+                }
+            }
+
+            return base.SaveChanges();
         }
 
         public DbSet<Image> Images { get; set; }

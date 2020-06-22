@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MercedesApplication
+namespace Application
 {
     public interface IApplicationActor
     {
-        public int Id { get;  }
-        public string Identity { get; set; }
-        public ICollection<int> AllowUseCases { get; }
+        int Id { get; }
+        string Identity { get; }
+        ICollection<string> AllowUseCases { get;  }
     }
 }

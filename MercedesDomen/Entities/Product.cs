@@ -1,11 +1,11 @@
-﻿using MercedesDomen.Entities;
+﻿using Domen.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 
 
-namespace MercedesDomen
+namespace Domen
 {
     public class Product : Entity
     {

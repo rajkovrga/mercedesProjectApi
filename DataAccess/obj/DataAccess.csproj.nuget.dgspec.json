@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\MercedesDomen.csproj": {
-                "projectPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\MercedesDomen.csproj"
+              "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\Domen.csproj": {
+                "projectPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\Domen.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[29.0.2, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -86,12 +90,12 @@
         }
       }
     },
-    "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\MercedesDomen.csproj": {
+    "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\Domen.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\MercedesDomen.csproj",
-        "projectName": "MercedesDomen",
-        "projectPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\MercedesDomen.csproj",
+        "projectUniqueName": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\Domen.csproj",
+        "projectName": "Domen",
+        "projectPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\Domen.csproj",
         "packagesPath": "C:\\Users\\Rajko\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\obj\\",
         "projectStyle": "PackageReference",

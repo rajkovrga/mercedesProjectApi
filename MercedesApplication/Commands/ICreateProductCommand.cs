@@ -1,9 +1,9 @@
-﻿using MercedesApplication.Dto;
+﻿using Application.Dto;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MercedesApplication.Commands
+namespace Application.Commands
 {
     public interface ICreateProductCommand : ICommand<ProductDto>
     {

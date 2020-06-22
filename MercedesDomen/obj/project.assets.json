@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\MercedesDomen.csproj",
-      "projectName": "MercedesDomen",
-      "projectPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\MercedesDomen.csproj",
+      "projectUniqueName": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\Domen.csproj",
+      "projectName": "Domen",
+      "projectPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\Domen.csproj",
       "packagesPath": "C:\\Users\\Rajko\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesDomen\\obj\\",
       "projectStyle": "PackageReference",

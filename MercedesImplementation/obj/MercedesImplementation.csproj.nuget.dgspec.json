@@ -4,12 +4,12 @@
     "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesImplementation\\MercedesImplementation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesApplication\\MercedesApplication.csproj": {
+    "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesApplication\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesApplication\\MercedesApplication.csproj",
-        "projectName": "MercedesApplication",
-        "projectPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesApplication\\MercedesApplication.csproj",
+        "projectUniqueName": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesApplication\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesApplication\\Application.csproj",
         "packagesPath": "C:\\Users\\Rajko\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesApplication\\obj\\",
         "projectStyle": "PackageReference",
@@ -85,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesApplication\\MercedesApplication.csproj": {
-                "projectPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesApplication\\MercedesApplication.csproj"
+              "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesApplication\\Application.csproj": {
+                "projectPath": "C:\\Users\\Rajko\\Desktop\\C#\\MercedesProject\\MercedesApplication\\Application.csproj"
               }
             }
           }

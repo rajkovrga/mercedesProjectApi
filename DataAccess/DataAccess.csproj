@@ -7,9 +7,28 @@
   <ItemGroup>
     <Compile Remove="Migrations\20200611151633_changed configuration.cs" />
     <Compile Remove="Migrations\20200611151633_changed configuration.Designer.cs" />
+    <Compile Remove="Migrations\20200617110516_added basic seeders.cs" />
+    <Compile Remove="Migrations\20200617110516_added basic seeders.Designer.cs" />
+    <Compile Remove="Migrations\20200617133445_added set identity default query.cs" />
+    <Compile Remove="Migrations\20200617133445_added set identity default query.Designer.cs" />
+    <Compile Remove="Migrations\20200617133600_added set identity default query.cs" />
+    <Compile Remove="Migrations\20200617133600_added set identity default query.Designer.cs" />
+    <Compile Remove="Migrations\20200617134042_initial.cs" />
+    <Compile Remove="Migrations\20200617134042_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200617134629_disable identity.cs" />
+    <Compile Remove="Migrations\20200617134629_disable identity.Designer.cs" />
+    <Compile Remove="Migrations\20200617142230_initial.cs" />
+    <Compile Remove="Migrations\20200617142230_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200617142609_initial.cs" />
+    <Compile Remove="Migrations\20200617142609_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200617143303_initial.cs" />
+    <Compile Remove="Migrations\20200617143303_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200617164753_initial3.cs" />
+    <Compile Remove="Migrations\20200617164753_initial3.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Bogus" Version="29.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.4">
       <PrivateAssets>all</PrivateAssets>
@@ -24,7 +43,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MercedesDomen\MercedesDomen.csproj" />
+    <ProjectReference Include="..\MercedesDomen\Domen.csproj" />
   </ItemGroup>
 
 </Project>

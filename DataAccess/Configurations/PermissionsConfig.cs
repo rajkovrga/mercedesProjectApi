@@ -1,4 +1,4 @@
-﻿using MercedesDomen.Entities;
+﻿using Domen.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -16,42 +16,6 @@ namespace DataAccess.Configurations
                 .HasForeignKey(x => x.PermissionId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasData(
-                    new Permission
-                    {
-                        Name = "create-product"
-                    },
-                    new Permission
-                    {
-                        Name = "update-product"
-                    },
-                    new Permission
-                    {
-                        Name = "delete-product"
-                    },
-                    new Permission
-                    {
-                        Name = "like-product"
-                    },
-                    new Permission
-                    {
-                        Name = "comment-product"
-                    },
-                    new Permission
-                    {
-                        Name = "like-comment"
-                    },
-                    new Permission
-                    {
-                        Name = "use-admin-panel"
-                    },
-                    new Permission
-                    {
-                        Name = "change-status"
-                    }, new Permission
-                    {
-                        Name = ""
-                    });
         }
     }
 }

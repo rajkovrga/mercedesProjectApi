@@ -1,12 +1,15 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters;
 using System.Text;
 
-namespace MercedesApplication.Dto
+
+namespace Application.Dto
 {
     public class ImageDto
     {
-       public IFieldInfo Url { get; set; }
+        public int Id { get; set; }
+        public IFormFile Image { get; set; }
     }
 }

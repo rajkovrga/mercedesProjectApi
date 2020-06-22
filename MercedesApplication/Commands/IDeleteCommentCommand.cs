@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MercedesApplication.Queries
+namespace Application.Commands
 {
     public interface IDeleteCommentCommand : ICommand<int>
     {
